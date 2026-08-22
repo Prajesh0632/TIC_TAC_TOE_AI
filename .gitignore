@@ -1,0 +1,13 @@
+# Build output
+/tictactoe
+*.o
+*.obj
+
+# Third-party SDL2 dev libraries (mingw-w64 prebuilt, ~400MB — not meant for version control)
+/lib/
+
+# Editor / OS cruft
+.vscode/
+.idea/
+*.swp
+.DS_Store
