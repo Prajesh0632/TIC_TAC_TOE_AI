@@ -58,7 +58,7 @@ Node* add_nodes(Node* node, int prev_r, int prev_col, char prev_move, char ai_mo
             node->prevCol = prev_col;
             node->_board = board;
 
-        if (depth == 0 || is_board_full(board)) return node;
+        if (depth == 0 || is_board_full(board) || check_win(board) != 0) return node;
             
 
 
@@ -148,7 +148,7 @@ BestMove minimax(Node* root, int depth, char ai_mark, bool maximize) {
         BestMove bestMax;
         bestMax.score = -inf;
         for(Node* node : root->children) {
-            
+
 
             BestMove candidate = minimax(node, depth -1, ai_mark, false);
             candidate.row = node->prevRow;

@@ -146,7 +146,7 @@ void Board::move(int x, int y) {
     }
 
     if(r != -1 && c != -1 && mark != '-') {
-        
+
         prev_move = mark;
         prev_r = r;
         prev_c = c;
@@ -249,6 +249,9 @@ void Board :: reset() {
     turn = 'X';
     mark_count = 0;
     result = 0;
+    prev_move = '-';
+    prev_r = -1;
+    prev_c = -1;
     player = rand() % 2;
     set_player_type();
 
